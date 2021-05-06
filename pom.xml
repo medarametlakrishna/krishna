@@ -47,7 +47,7 @@
 				<version>1.3.1</version>
 				<executions>
 					<execution>
-						<id>default-cli</id>
+						<id>enforce-java</id>
 						<goals>
 							<goal>enforce</goal>
 						</goals>
@@ -74,4 +74,3 @@
 		</plugins>
 	</build>
 </project>
-
