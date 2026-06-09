@@ -1,11 +1,26 @@
 pipeline {
-    agent any
+agent any
 
-    stages {
-        stage('Test') {
-            steps {
-                echo 'GitHub and Jenkins integration successful'
-            }
+```
+stages {
+    stage('Checkout') {
+        steps {
+            checkout scm
         }
     }
+
+    stage('Build') {
+        steps {
+            sh 'mvn clean package'
+        }
+    }
+}
+
+post {
+    success {
+        echo 'Build completed successfully'
+    }
+}
+```
+
 }
